@@ -1,33 +1,42 @@
 @import 'tailwindcss';
 
 :root {
-    --background: #0a0a0a;
-    /* --foreground: #171717; */
-    --foreground: #e8e8e8;
-    --accent: #d4af37;
+    --background: #1e1e1e;
+    --primary: #e0e0e0;
+    --secondary: #e0e0e0;
+    --key: #1c69ce;
+    --accent: #c69700;
 }
 
 @theme inline {
     --color-background: var(--background);
-    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-key: var(--key);
     --color-accent: var(--accent);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
 }
-
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
-} */
 
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: Inter, sans-serif;
 }
 
 .nav-link {
-    padding: 0px 16px;
+    padding: 0px 12px;
+}
+
+.hero-gradient {
+    background: linear-gradient(0deg, rgba(30, 30, 30, 1) 90%, rgba(255, 255, 255, 0) 100%);
+}
+
+.card-gradient {
+    background: radial-gradient(72.52% 72.52% at 50% 50%, rgba(0, 0, 0, 0) 49.5%, rgba(153, 100, 38, 0.5) 100%);
+}
+
+.apply-button {
+    background: radial-gradient(39.48% 39.48% at 50% 50.63%, #d2aa56 6.71%, #996426 92.07%);
+}
+
+.apply-button-focus {
+    background: radial-gradient(39.48% 39.48% at 50% 50.63%, rgba(255, 173, 0, 0.8) 58%, #d37404 100%);
 }

@@ -3,16 +3,16 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div className='h-15 bg-background flex items-center px-15 text-foreground border-b-[0.2px] border-gray-900 fixed w-full'>
+        <div className='h-15 z-10 bg-background flex items-center px-15 text-foreground border-b-[0.2px] border-gray-900 fixed w-full '>
             <div id='container' className='flex items-center justify-between w-full'>
                 <Image src='/logo.svg' alt='logo' width={75} height={31} />
-                <div id='links' className='flex items-center gap-7 text-sm'>
+                <div id='links' className={`flex items-center gap-6 text-lg font-semibold text-[#9E9E9E]`}>
                     <a className='nav-link' href='#'>
                         Home
                     </a>
 
                     <a className='nav-link' href='#'>
-                        About
+                        About Us
                     </a>
 
                     <a className='nav-link' href='#'>
@@ -31,7 +31,7 @@ const Navbar = () => {
                         Views
                     </a>
 
-                    <button className='bg-accent color-background rounded-full h-7 px-5 text-background'>Apply Now</button>
+                    <button className='bg-key color-background rounded-full h-7 px-5 text-primary text-base'>Apply Now</button>
                 </div>
             </div>
         </div>
