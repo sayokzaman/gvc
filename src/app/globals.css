@@ -1,42 +1,60 @@
 @import 'tailwindcss';
 
 :root {
-    --background: #1e1e1e;
-    --primary: #e0e0e0;
-    --secondary: #e0e0e0;
-    --key: #1c69ce;
-    --accent: #c69700;
+    --primary: #212529;
+    --secondary: #f8f9fa;
+    --accent: #c0902c;
 }
 
 @theme inline {
-    --color-background: var(--background);
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
-    --color-key: var(--key);
     --color-accent: var(--accent);
 }
 
 body {
-    background: var(--background);
     color: var(--foreground);
 }
 
-.nav-link {
-    padding: 0px 12px;
+.nav-links:hover {
+    color: var(--accent);
+    transition: color 0.2s ease-in-out;
 }
 
-.hero-gradient {
-    background: linear-gradient(0deg, rgba(30, 30, 30, 1) 90%, rgba(255, 255, 255, 0) 100%);
+.hover-underline {
+    position: relative;
+    display: inline-block;
 }
 
-.card-gradient {
-    background: radial-gradient(72.52% 72.52% at 50% 50%, rgba(0, 0, 0, 0) 49.5%, rgba(153, 100, 38, 0.5) 100%);
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 30;
+    width: 0;
+    height: 2px; /* Border thickness */
+    background: var(--accent);
+    transition: width 0.2s ease-in-out;
 }
 
-.apply-button {
-    background: radial-gradient(39.48% 39.48% at 50% 50.63%, #d2aa56 6.71%, #996426 92.07%);
+.hover-underline:hover::after {
+    width: 100%;
 }
 
-.apply-button-focus {
-    background: radial-gradient(39.48% 39.48% at 50% 50.63%, rgba(255, 173, 0, 0.8) 58%, #d37404 100%);
+.about-section-gradient {
+    background: rgb(248, 249, 250);
+    background: linear-gradient(0deg, rgba(248, 249, 250, 1) 10%, rgba(248, 249, 250, 0.9) 40%, rgba(248, 249, 250, 0.6) 100%);
+}
+
+.default-margin {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+@media (min-width: 1280px) {
+    .default-margin {
+        width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
