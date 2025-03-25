@@ -4,12 +4,14 @@
     --primary: #212529;
     --secondary: #f8f9fa;
     --accent: #c0902c;
+    --key: #fbf4da;
 }
 
 @theme inline {
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
     --color-accent: var(--accent);
+    --color-key: var(--key);
 }
 
 body {
